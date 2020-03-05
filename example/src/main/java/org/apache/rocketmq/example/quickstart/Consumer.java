@@ -38,16 +38,10 @@ public class Consumer {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("please_rename_unique_group_name_4");
 
         /*
-         * Specify name server addresses.
-         * <p/>
-         *
-         * Alternatively, you may specify name server addresses via exporting environmental variable: NAMESRV_ADDR
-         * <pre>
-         * {@code
-         * consumer.setNamesrvAddr("name-server1-ip:9876;name-server2-ip:9876");
-         * }
-         * </pre>
+         * 设置本地NameServer地址
          */
+         consumer.setNamesrvAddr("127.0.0.1:9876");
+
 
         /*
          * Specify where to start in case the specified consumer group is a brand new one.
